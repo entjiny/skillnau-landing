@@ -13,7 +13,7 @@
       --font: 'Pretendard', sans-serif;
       --header-height: 64px;
       --menu-hover: #FF6C4A;
-      --button-radius: 12px;
+      --button-radius: 14px;
       --button-border: #E0E0E0;
       --button-bg: #fff;
     }
@@ -32,7 +32,7 @@
     }
     .container {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1140px;
       margin: 0 auto;
       padding: 0 20px;
       box-sizing: border-box;
@@ -52,7 +52,7 @@
       z-index: 10;
     }
     .logo {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 800;
       letter-spacing: -1px;
       display: flex;
@@ -86,11 +86,11 @@
       border: 1.5px solid var(--button-border);
       border-radius: var(--button-radius);
       background: var(--button-bg);
-      color: #222;
-      font-size: 1rem;
+      color: #444;
+      font-size: 0.8rem;
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.4s;
     }
     .header-btn:hover {
       background: var(--gradient);
@@ -103,17 +103,19 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 80px 16px 40px 16px;
+      padding: 140px 16px 60px 16px;
+      background: linear-gradient(180deg, #FFF0F2 0%, #FFFFFF 100%);
     }
     .pre-header {
-      font-size: 1.1rem;
-      color: #888;
+      font-size: 2em;
+      font-weight: 600;
+      color: #FF6C4A;
       margin-bottom: 18px;
       font-weight: 500;
     }
     .headline {
-      font-size: 2.5rem;
-      font-weight: 900;
+      font-size: 3rem;
+      font-weight: 800;
       line-height: 1.2;
       margin-bottom: 18px;
       display: flex;
@@ -134,23 +136,88 @@
     .subtext {
       font-size: 1.15rem;
       color: #444;
-      margin-bottom: 32px;
+      margin-bottom: 60px;
       font-weight: 400;
     }
     .cta-btn {
-      padding: 14px 36px;
-      font-size: 1.1rem;
+      padding: 12px 32px;
+      font-size: 1rem;
       font-weight: 700;
-      border: none;
+      border: 1px solid transparent;
       border-radius: var(--button-radius);
       background: var(--gradient);
       color: #fff;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: background 0.7s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: 0 2px 8px rgba(255,108,74,0.08);
     }
     .cta-btn:hover {
-      background: linear-gradient(90deg, #EF7988 0%, #FF6C4A 50%, #F09366 100%);
+      background: transparent;
+      border: 1px solid #ff6b4a9d;
+      color: #FF6C4A;
+    }
+    .pre-header, .headline, .subtext {
+      text-align: center;
+    }
+    .testimonial-box {
+      margin: 48px auto 0 auto;
+      padding: 32px 28px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1.5px solid #FF6C4A22;
+      border-radius: 24px;
+      box-shadow: 0 4px 24px 0 rgba(255, 108, 74, 0.07);
+      max-width: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .testimonial-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .testimonial-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: block;
+      object-fit: cover;
+      border: 1.5px solid #FFE1D6;
+      box-shadow: 0 2px 8px 0 rgba(255,108,74,0.10);
+      flex-shrink: 0;
+    }
+    .testimonial-texts {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: left;
+    }
+    .testimonial-title {
+      font-size: 1.1rem;
+      color: #444;
+      font-weight: 700;
+    }
+    .testimonial-body {
+      font-size: 1rem;
+      color: #666;
+    }
+    .testimonial-meta {
+      font-size: 0.95rem;
+      color: #888;
+      margin-top: 4px;
+    }
+    @media (max-width: 600px) {
+      .testimonial-box {
+        padding: 20px 8px;
+      }
+      .testimonial-content {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+      }
+      .testimonial-texts {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -165,18 +232,29 @@
       </nav>
       <button class="header-btn">디자이너 인재풀 등록</button>
     </header>
-
-    <main>
-      <section class="hero">
-        <div class="pre-header">레퍼런스도 줬고, 방향도 설명했는데...</div>
+  </div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="pre-header">디자인 기획도 레퍼런스도 전달했지만</div>
         <div class="headline">
           <span class="gradient">디자인 외주,</span>
           <span class="black">왜 늘 기대에 못 미칠까요?</span>
         </div>
         <div class="subtext">스킬나우는 디자인 기획부터 소통까지 전담 매니저가 함께 합니다.</div>
         <button class="cta-btn">지금 디자인 의뢰하기</button>
-      </section>
-    </main>
-  </div>
+        <div class="testimonial-box">
+          <div class="testimonial-content">
+            <img src="https://cdn.jsdelivr.net/gh/entjiny/skillnau-landing@main/images/memoji-character01-orange-ipad.png" alt="3D 캐릭터" class="testimonial-avatar">
+            <div class="testimonial-texts">
+              <div class="testimonial-title"><b>디자인뿐 아니라 기획 정리까지 맡길 수 있어서 든든해요!</b></div>
+              <div class="testimonial-body">처음엔 기획조차 몰라서 막막했는데, 전담 매니저가 방향을 잡아준 덕분에 기대했던 디자인이 나왔어요.</div>
+              <div class="testimonial-meta">최OO 대표 (IT UX/UI, 4주 프로젝트)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
