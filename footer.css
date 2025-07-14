@@ -1,0 +1,102 @@
+.footer {
+  background: #18181C;
+  color: #fff;
+  padding: 48px 0 24px 0;
+  width: 100%;
+  min-height: 140px;
+}
+
+.footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 0 24px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  background: none;
+  /* 아래 두 줄은 임시로 여백을 잘라내는 효과 */
+  /* overflow: hidden; */
+  /* aspect-ratio: 5 / 1;  예: 가로5, 세로1 비율로 강제 */
+}
+
+.footer-text {
+  color: #bbb;
+  font-size: 15px;
+}
+
+.footer-info {
+  color: #bbb;
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 4px;
+  white-space: pre-line;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-icon img {
+  height: 30px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+.footer-icon:hover img {
+  opacity: 1;
+}
+
+.hr-line {
+  width: 1140px;
+  height: 1px;
+  background: #333;
+  margin: 16px auto;
+  border: none;
+}
+
+.footer-bottom-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  width: 100%;
+}
+.footer-bottom-row .footer-text {
+  color: #bbb;
+  font-size: 15px;
+}
+.footer-bottom-row .footer-right {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .footer-right {
+    margin-top: 16px;
+  }
+} 

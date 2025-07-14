@@ -6,6 +6,8 @@
   <title>SkillNau - 디자인 외주, 기대를 뛰어넘다</title>
   <!-- Pretendard Font -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <!-- 푸터 CSS 연결 -->
+  <link rel="stylesheet" href="footer.css">
   <style>
     :root {
       --primary: #FF6C4A;
@@ -51,6 +53,14 @@
       top: 0;
       z-index: 10;
     }
+    .header-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     .logo {
       font-size: 1.5rem;
       font-weight: 800;
@@ -91,6 +101,7 @@
       font-weight: 600;
       cursor: pointer;
       transition: all 0.4s;
+      text-decoration: none;
     }
     .header-btn:hover {
       background: var(--gradient);
@@ -103,13 +114,13 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 140px 16px 60px 16px;
+      padding: 140px 16px 80px 16px;
       background: linear-gradient(180deg, #FFF0F2 0%, #FFFFFF 100%);
     }
     .pre-header {
       font-size: 2em;
       font-weight: 600;
-      color: #FF6C4A;
+      color: #ff6b4ac9;
       margin-bottom: 18px;
       font-weight: 500;
     }
@@ -150,6 +161,7 @@
       cursor: pointer;
       transition: background 0.7s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: 0 2px 8px rgba(255,108,74,0.08);
+      text-decoration: none;
     }
     .cta-btn:hover {
       background: transparent;
@@ -160,12 +172,12 @@
       text-align: center;
     }
     .testimonial-box {
-      margin: 48px auto 0 auto;
-      padding: 32px 28px;
+      margin: 60px auto 0 auto;
+      padding: 20px 40px;
       background: rgba(255, 255, 255, 0.95);
-      border: 1.5px solid #FF6C4A22;
+      border: 2px solid #FF6C4A22;
       border-radius: 24px;
-      box-shadow: 0 4px 24px 0 rgba(255, 108, 74, 0.07);
+      box-shadow: 0 4px 24px 0 rgba(255, 107, 74, 0.123);
       max-width: 600px;
       display: flex;
       justify-content: center;
@@ -174,17 +186,14 @@
     .testimonial-content {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 34px;
     }
     .testimonial-avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
+      width: 120px;
+      height: 120px;
       display: block;
-      object-fit: cover;
-      border: 1.5px solid #FFE1D6;
-      box-shadow: 0 2px 8px 0 rgba(255,108,74,0.10);
-      flex-shrink: 0;
+      object-fit: contain;
+      margin: 0 auto 0 auto;
     }
     .testimonial-texts {
       display: flex;
@@ -204,7 +213,7 @@
     .testimonial-meta {
       font-size: 0.95rem;
       color: #888;
-      margin-top: 4px;
+      margin-top: 8px;
     }
     @media (max-width: 600px) {
       .testimonial-box {
@@ -219,20 +228,240 @@
         text-align: center;
       }
     }
+    .design-types-section {
+      width: 100%;
+      background: #fff;
+      padding: 60px 60px 60px 60px;
+    }
+    .design-types-container {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: nowrap;
+    }
+    .design-types-title {
+      font-size: 1.5rem;
+      color: #222;
+      font-weight: 600;
+      text-align: left;
+      min-width: 260px;
+      max-width: 280px;
+      line-height: 1.5;
+      flex: 1 1 0;
+    }
+    .design-types-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex: 2 1 0;
+    }
+    .design-types-list button {
+      background: rgba(255,255,255,0.3);
+      color: #FF6C4A;
+      border: 1px solid #FF6C4A;
+      border-radius: 18px;
+      padding: 10px 26px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px 0 rgba(255,108,74,0.10);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, border 0.2s;
+    }
+    /*.design-types-list button:hover {
+      background: linear-gradient(90deg, #F09366 0%, #FF6C4A 50%, #EF7988 100%);
+      color: #fff;
+      border: 1.5px solid #FF6C4A;
+    }*/
+    @media (max-width: 900px) {
+      .design-types-container {
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 16px;
+        align-items: stretch;
+      }
+      .design-types-title {
+        text-align: center;
+        max-width: 100%;
+      }
+      .design-types-list {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+    .fail-reason-section {
+      width: 100%;
+      background: #F7F8F9;
+      padding: 80px 0 60px 0;
+    }
+    .fail-reason-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .fail-reason-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 36px;
+      width: 100%;
+    }
+    .trust {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      justify-self: end;
+    }
+    .communication {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      justify-self: start;
+    }
+    .planning {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      align-self: start;
+      justify-self: end;
+    }
+    .character-img-wrap {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .character-img {
+      max-width: 160px;
+      width: 100%;
+      margin-top: 0;
+      display: block;
+    }
+    .result {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      align-self: start;
+      justify-self: start;
+    }
+    .bubble {
+      position: relative;
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px 16px 16px 16px;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      line-height: 1.5;
+      text-align: left;
+      max-width: 100%;
+      word-break: keep-all;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .mini-title {
+      background: #444;
+      color: #fff;
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 5px 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      position: absolute;
+      top: -14px;
+      left: 18px;
+      z-index: 2;
+    }
+    .bubble::after {
+      content: "";
+      position: absolute;
+      left: 20px;
+      bottom: -12px;
+      border-width: 12px 8px 0 8px;
+      border-style: solid;
+      border-color: #fff transparent transparent transparent;
+    }
+    .trust::after, .planning::after {
+      left: auto;
+      right: 20px;
+    }
+    .communication::after, .result::after {
+      left: 20px;
+    }
+    .bubble.planning {
+      margin-right: 50px;
+    }
+    .bubble.result {
+      margin-left: 50px;
+    }
+    @media (max-width: 700px) {
+      .fail-reason-inner {
+        padding: 0 8px;
+      }
+      .fail-reason-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        gap: 8px;
+        max-width: 98vw;
+      }
+      /*.trust, .communication, .planning, .result, .character-img-wrap {
+        grid-column: 1 / 2 !important;
+        justify-self: stretch !important;
+        align-self: stretch !important;
+      }*/
+      .trust, .planning {
+        grid-column: 1 / 2 !important;
+        justify-self: end !important;  /* 우측 정렬 */
+        align-self: start !important;
+    }
+    .communication, .result {
+        grid-column: 1 / 2 !important;
+        justify-self: start !important;  /* 좌측 정렬 */
+        align-self: start !important;
+    }
+    .character-img-wrap {
+        justify-self: center !important;
+        align-self: center !important;
+    }
+      .character-img {
+        max-width: 200px;
+      }
+    }
+    .fail-reason-title {
+      font-size: 2rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      
+      margin-bottom: 80px;
+      color: #222;
+      text-align: center;
+    }
+    .header-logo {
+      height: 22px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="logo"><span class="orange">Skill</span><span class="black">Nau</span></div>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/logo_orange.png" alt="SkillNau Logo" class="header-logo" />
+      </div>
       <nav class="nav">
-        <a href="#intro">서비스 소개</a>
-        <a href="#process">진행 방법</a>
-        <a href="#cases">고객 사례</a>
+        <a href="#service-advantage-section">서비스 소개</a>
+        <a href="#process-section-bg">진행 방법</a>
+        <a href="#review-section">고객 사례</a>
       </nav>
-      <button class="header-btn">디자이너 인재풀 등록</button>
-    </header>
-  </div>
+      <a href="https://super-cendol-354c83.netlify.app" target="_blank" rel="noopener noreferrer" class="header-btn">디자이너 인재풀 등록</a>
+    </div>
+  </header>
   <main>
     <section class="hero">
       <div class="container">
@@ -242,10 +471,10 @@
           <span class="black">왜 늘 기대에 못 미칠까요?</span>
         </div>
         <div class="subtext">스킬나우는 디자인 기획부터 소통까지 전담 매니저가 함께 합니다.</div>
-        <button class="cta-btn">지금 디자인 의뢰하기</button>
+        <a href="https://tally.so/r/w2dyEp" target="_blank" rel="noopener noreferrer" class="cta-btn">지금 디자인 의뢰하기</a>
         <div class="testimonial-box">
           <div class="testimonial-content">
-            <img src="https://cdn.jsdelivr.net/gh/entjiny/skillnau-landing@main/images/memoji-character01-orange-ipad.png" alt="3D 캐릭터" class="testimonial-avatar">
+            <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/memoji-character01-orange-ipad.png" alt="3D 캐릭터" class="testimonial-avatar">
             <div class="testimonial-texts">
               <div class="testimonial-title"><b>디자인뿐 아니라 기획 정리까지 맡길 수 있어서 든든해요!</b></div>
               <div class="testimonial-body">처음엔 기획조차 몰라서 막막했는데, 전담 매니저가 방향을 잡아준 덕분에 기대했던 디자인이 나왔어요.</div>
@@ -255,6 +484,760 @@
         </div>
       </div>
     </section>
+    <section class="design-types-section">
+      <div class="design-types-container">
+        <div class="design-types-title">
+          비즈니스에 필요한<br>
+          모든 디자인을 한 곳에서
+        </div>
+        <div class="design-types-list">
+          <button>콘텐츠 디자인</button>
+          <button>UX/UI 디자인</button>
+          <button>브랜딩 디자인</button>
+          <button>상세페이지 디자인</button>
+          <button>영상 편집/모션</button>
+          <button>제품·패키지 디자인</button>
+          <button>기획 서비스</button>
+        </div>
+      </div>
+    </section>
+    <section class="fail-reason-section">
+        <h2 class="fail-reason-title">디자인 외주, 왜 매번 실패하는 걸까요?</h2>
+      <div class="fail-reason-inner">
+        <div class="fail-reason-grid">
+          <div class="bubble trust">
+            <div class="mini-title">신뢰도 문제</div>
+            피드백 주고 받을수록 내가 까다로운 사람처럼 느껴지더라고요.
+          </div>
+          <div class="bubble communication">
+            <div class="mini-title">의사소통 문제</div>
+            전달했던 방향이 반영 안 돼서, 내가 다시 순서랑 내용까지 정리했어요.
+          </div>
+          <div class="bubble planning">
+            <div class="mini-title">기획 문제</div>
+            기획을 처음 해봐서 어떻게 잡아야 할지 감이 오지 않아요.
+          </div>
+          <div class="character-img-wrap">
+            <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/memoji-character02-laptop-confused.png" alt="고민하는 캐릭터" class="character-img">
+          </div>
+          <div class="bubble result">
+            <div class="mini-title">결과물 문제</div>
+            막상 받은 결과물이 생각했던 것과 전혀 달라서 아쉬워요.
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+<section id="service-advantage-section" class="service-advantage-section">
+  <h2 class="service-advantage-title">
+    기획부터 매니징하는 <span class="highlight">스킬나우</span>
+  </h2>
+  <div class="service-advantage-subtext">
+    <b>기획 정리부터 디자이너 매칭까지,</b>꼭 필요한 부분을 서포트합니다.
+  </div>
+  <div class="service-advantage-cards">
+    <div class="advantage-card">
+      <div class="advantage-icon">💡</div>
+      <div class="advantage-title">
+        <span class="orange">전담 매니저</span>가 함께 합니다.
+      </div>
+      <div class="advantage-line"></div>
+      <div class="advantage-desc">
+        커뮤니케이션과 피드백을 조율에 만족스러운 결과물이 완성되도록 함께합니다.
+      </div>
+    </div>
+    <div class="advantage-card">
+      <div class="advantage-icon">🎨</div>
+      <div class="advantage-title">
+        <span class="orange">검증된 디자이너</span>만 매칭합니다
+      </div>
+      <div class="advantage-line"></div>
+      <div class="advantage-desc">
+        디자인 경력 3~5년 대상 디자이너의 이력서와 포트폴리오를 직접 선별해 드립니다.
+      </div>
+    </div>
+    <div class="advantage-card">
+      <div class="advantage-icon">📝</div>
+      <div class="advantage-title">
+        <span class="orange">기획안 정리</span>를 도와드립니다
+      </div>
+      <div class="advantage-line"></div>
+      <div class="advantage-desc">
+        상담을 통해 전달 내용을 정리하고 디자인 방향을 명확히 잡아드립니다.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="process-section-bg" class="process-section-bg">
+  <section class="process-section">
+    <h2 class="process-title">외주업체가 아닌 파트너로 함께합니다
+    </h2>
+    <div class="process-title-subtext">스킬나우 디자인 협업 <b>5단계 프로세스</b>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-step-num">1</div>
+        <div class="process-step-title">신청하기</div>
+        <div class="process-step-desc">간단한 프로젝트 정보만 입력하면 시작됩니다.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">2</div>
+        <div class="process-step-title">전담매니저 상담</div>
+        <div class="process-step-desc">전담 매니저가 기획서와 레퍼런스를 함께 정리해드려요.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">3</div>
+        <div class="process-step-title">계약 체결</div>
+        <div class="process-step-desc">확정된 조건으로 간편하게 계약서를 작성합니다.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">4</div>
+        <div class="process-step-title">중간 피드백</div>
+        <div class="process-step-desc">작업 진행 중 주요 시점마다 결과물 공유와 피드백을 반영해요.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">5</div>
+        <div class="process-step-title">완료</div>
+        <div class="process-step-desc">정해진 일정에 맞춰 최종 결과물을 전달드려요.</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="review-section" class="review-section">
+  <h2 class="review-title">
+    <span class="highlight">스킬나우</span>와 함께 성공적인 외주 디자인을 경험하세요
+  </h2>
+  <div class="review-cards">
+    <div class="review-card">
+      <div class="review-profile">
+        <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/memoji-character01-orange-ipad.png" alt="프로필" />
+        <div class="review-meta-wrap">
+          <div class="review-meta">최OO 대표</div>
+          <div class="review-meta-detail">(IT UXUI, 4주 프로젝트)</div>
+        </div>
+      </div>
+      <div class="review-strong">디자인뿐 아니라 기획 정리까지 맡길 수 있어서 든든합니다.</div>
+      <div class="review-desc">
+        디자인뿐 아니라 기획 정리까지 함께 해주셔서 눈높았어요.<br>
+        처음엔 막막했는데, 전담 매니저가 방향을 잡아 준 덕분에 매끄럽게 끝났습니다.
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-profile">
+        <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/memoji-character01-beige-women.png" alt="프로필" />
+          <div class="review-meta-wrap">
+          <div class="review-meta">장OO 대표</div>
+          <div class="review-meta-detail">(여성 잡화 쇼핑몰)</div>
+        </div>
+      </div>
+      <div class="review-strong">적합한 디자이너 분들 빠르게 매칭 받을 수 있었어요.</div>
+      <div class="review-desc">
+        이전엔 디자이너 찾는 데만 일주일 넘게 걸렸어요.<br>
+        이번엔 바로 적합한 분을 추천받아 2주 만에 완성했어요, 매출도 높았고요.
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-profile">
+        <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/memoji-character01-brown-men.png" alt="프로필" />
+          <div class="review-meta-wrap">
+          <div class="review-meta">이OO 대표</div>
+          <div class="review-meta-detail">(소셜임팩트 스타트업)</div>
+        </div>
+      </div>
+      <div class="review-strong">기획의 방향성을 잡기 힘들었는데, 함께 기획부터 해주시니 좋았어요.</div>
+      <div class="review-desc">
+        디자이너가 브랜드 맥락을 너무 잘 이해하고, 결과물 완성도가 높았어요.<br>
+        디자이너 착수받기 전 미팅에서 방향을 함께 잡아주신 게 큰 도움이 됐어요.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta2-section">
+  <div class="cta2-inner">
+    <h2 class="cta2-title">
+      매니저와 함께하는 실패없는 디자인 협업,<br>
+      지금 바로 시작해 보세요
+    </h2>
+    <div class="cta2-desc">
+      지금 신청 시 무료로 디자인 기획 컨설팅을 제공합니다.
+    </div>
+    <a href="https://tally.so/r/w2dyEp" target="_blank" rel="noopener noreferrer" class="cta2-btn">지금 디자인 의뢰하기</a>
+  </div>
+</section>
+
+<section class="faq-section-bg">
+  <section class="faq-section">
+    <h2 class="faq-title">자주 묻는 질문</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          Q1. 프로젝트 등록 전에 준비할 게 있나요?
+          <span class="faq-toggle-icon"></span>
+        </button>
+        <div class="faq-answer">별도 양식 없이도 등록하실 수 있어요. 다만 기획 목적, 희망 스타일, 참고 자료 등을 함께 알려주시면 더 정확한 매칭과 결과로 이어집니다. 등록 후 ‘디자인 의뢰 상세 기획안’ 작성 서식을 이메일로 보내드릴게요.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Q2. 기획이 없어도 괜찮나요?
+          <span class="faq-toggle-icon"></span>
+        </button>
+        <div class="faq-answer">네, 괜찮습니다! 스킬나우 매니저가 상담을 통해 기획 정리부터 도와드려요.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Q3. 어떤 디자이너가 매칭되나요?
+          <span class="faq-toggle-icon"></span>
+        </button>
+        <div class="faq-answer">프로젝트 성격과 필요 스킬에 맞는 디자이너를 직접 선별해드리며, 포트폴리오도 함께 전달드립니다.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Q4. 커뮤니케이션은 어떻게 하나요?
+          <span class="faq-toggle-icon"></span>
+        </button>
+        <div class="faq-answer">매칭 후에는 카카오톡 그룹채팅방을 통해 스킬나우 매니저와 디자이너가 함께 소통해요. 진행 상황을 함께 점검하고, 필요한 피드백도 빠르게 주고받을 수 있도록 돕고 있어요.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Q5. 디자인 작업은 어떻게 진행되나요?
+          <span class="faq-toggle-icon"></span>
+        </button>
+        <div class="faq-answer">일반적으로는 ‘초기 시안 → 중간 확인 → 최종 결과물’의 단계로 진행돼요. 작업 성격이나 기간, 난이도에 따라 일부 단계가 간소화될 수 있고, 모든 과정은 사전에 안내드려요.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Q6. 결과물이 마음에 들지 않으면 어떻게 하나요?
+          <span class="faq-toggle-icon"></span>
+        </button>
+        <div class="faq-answer">기본 1회 수정이 포함되어 있으며, 처음 요청한 기획 방향과 다를 경우 스킬나우가 중간에서 조율을 도와드립니다. 단, 최초 요청 내용에서 변경이 생긴 경우엔 추가 작업비가 발생할 수 있어요.</div>
+      </div>
+    </div>
+    <div class="faq-bottom-row">
+        <div class="faq-bottom-text">더 궁금한 점이 있다면 언제든지 매니저에게 물어보세요!</div>
+        <a href="https://open.kakao.com/o/sM0keNDh" target="_blank" rel="noopener noreferrer" class="faq-inquiry-btn">1:1 문의하기</a>
+      </div>
+  </section>
+</section>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+[id] {
+  scroll-margin-top: 80px;
+}
+.service-advantage-section {
+  max-width: 1140px;
+  margin: 80px auto 0 auto;
+  padding: 0 0 120px 0;
+  text-align: center;
+}
+.service-advantage-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.service-advantage-title .highlight {
+  color: #FF6B00;
+}
+.service-advantage-subtext {
+  font-size: 1.08rem;
+  color: #666;
+  margin-bottom: 48px;
+}
+.service-advantage-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+.advantage-card {
+  background: #F8F9FB;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.144);
+  border: 1px solid #E3E6EA;
+  padding: 36px 24px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.advantage-card:hover {
+  box-shadow: 0 6px 24px rgba(255,107,0,0.12);
+  transform: scale(1.03);
+  z-index: 1;
+}
+.advantage-icon {
+  font-size: 2.1rem;
+  color: #FF6B00;
+  margin-bottom: 14px;
+}
+.advantage-title {
+  font-size: 1.13rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+.advantage-line {
+  width: 220px;
+  height: 2px;
+  background: linear-gradient(90deg, #FFB156 0%, #FF6B00 100%);
+  border-radius: 2px;
+  margin-bottom: 22px;
+}
+.advantage-desc {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin: 0 20px 0 20px;
+}
+.advantage-title .orange {
+  color: #FF6B00;
+  font-weight: 700;
+}
+@media (max-width: 900px) {
+  .service-advantage-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .advantage-card {
+    padding: 28px 12px 24px 12px;
+  }
+}
+
+.process-section-bg {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #F7F8F9;
+  padding: 80px 0 80px 0;
+}
+.process-section {
+  max-width: 1140px;
+  margin: 0 auto 100px auto;
+  padding: 0 20px;
+  text-align: center;
+  background: transparent;
+}
+.process-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.process-title-subtext {
+  font-size: 1.08rem;
+  color: #666;
+  margin-bottom: 68px;
+}
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0 24px;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 32px;
+}
+.process-steps::before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: calc(38px / 2 + 66px);
+  right: calc(38px / 2 + 66px);
+  height: 4px;
+  background: #FF6B00;
+  opacity: 0.12;
+  z-index: 0;
+}
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8px;
+}
+.process-step-num {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(45deg, #FF6C4A 30%, #F09366 70%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(255,107,0,0.08);
+  position: relative;
+  z-index: 1;
+}
+.process-step-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  color: #222;
+}
+.process-step-desc {
+  font-size: 0.98rem;
+  color: #888;
+  line-height: 1.7;
+}
+@media (max-width: 900px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 24px 0;
+  }
+  .process-step {
+    margin-bottom: 24px;
+  }
+}
+
+.review-section {
+  max-width: 1140px;
+  margin: 80px auto 100px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.review-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+.review-title .highlight {
+  color: #FF6B00;
+}
+.review-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  justify-content: center;
+}
+.review-card {
+  background: #F8F9FB;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.144);
+  padding: 40px 50px 40px 50px;
+  border: 1px solid #E3E6EA;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.review-card:hover {
+  box-shadow: 0 6px 24px rgba(255,107,0,0.12);
+  transform: scale(1.03);
+  z-index: 1;
+}
+.review-profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 14px;
+}
+.review-profile img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  background: #eee;
+}
+.review-meta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.review-meta {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+.review-meta-detail {
+  font-size: 0.95rem;
+  color: #888;
+  font-weight: 400;
+  margin-left: 0;
+  margin-bottom: 2px;
+}
+.review-strong {
+  color: #FF6B00;
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.4;
+}
+.review-desc {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  .review-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .review-card {
+    padding: 24px 12px 20px 12px;
+  }
+}
+
+.cta2-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: linear-gradient(90deg, #F49C6E 0%, #F17E7E 100%);
+  padding: 90px 0 90px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cta2-inner {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+.cta2-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.4;
+}
+.cta2-desc {
+  font-size: 1.08rem;
+  margin-bottom: 38px;
+  color: #fff;
+  opacity: 0.95;
+}
+.cta2-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 700; /* 동일하게 맞춤 */
+  color: #fff;
+  background: #ffffff23;
+  border: 1.5px solid #fff;
+  border-radius: 14px; /* 동일하게 맞춤 */
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.cta2-btn:hover {
+  background: #fff;
+  color: #F17E7E;
+  box-shadow: 0 4px 24px rgba(241,126,126,0.12);
+}
+@media (max-width: 700px) {
+  .cta2-title {
+    font-size: 1.25rem;
+  }
+  .cta2-inner {
+    padding: 0 10px;
+  }
+  .cta2-section {
+    padding: 60px 0 60px 0;
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  height: 80px;
+}
+.header-container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+main {
+  padding-top: 0;
+}
+.faq-section-bg {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #F7F8F9;
+  padding: 0;
+}
+.faq-section {
+  max-width: 900px;
+  margin: 100px auto 80px auto;
+  padding: 0 20px;
+  background: transparent;
+}
+.faq-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.faq-item {
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #e9e9e9;
+  box-shadow: none;
+  overflow: visible;
+}
+.faq-question {
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 22px 28px;
+  cursor: pointer;
+  color: #222;
+  transition: background 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*.faq-question:hover {
+  color: #F17E7E;
+}*/
+.faq-toggle-icon {
+  margin-left: 16px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #F17E7E; /* 삼각형 색상 */
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.faq-item.active .faq-toggle-icon {
+  transform: rotate(180deg);
+  border-top: 8px solid #979797;
+}
+.faq-answer {
+  display: none;
+  padding: 22px 28px 22px 28px;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  background: #fff;
+  border-top: 1px solid #e9e9e9;
+}
+.faq-item.active .faq-answer {
+  display: block;
+}
+.faq-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  padding: 0 8px;
+  font-size: 1rem;
+  color: #444;
+  background: transparent;
+}
+.faq-bottom-text {
+  color: #444;
+  font-size: 1rem;
+  text-align: left;
+}
+.faq-inquiry-btn {
+  display: inline-block;
+  padding: 8px 24px;
+  border: 1.5px solid #FF6B00;
+  border-radius: 8px;
+  color: #FF6B00;
+  background: #ffffff65;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.faq-inquiry-btn:hover {
+  background: var(--gradient);
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .faq-bottom-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    text-align: center;
+  }
+  .faq-inquiry-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+</style>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = btn.parentElement;
+    item.classList.toggle('active');
+  });
+});
+</script>
+
+<!-- 푸터 코드 붙여넣기 -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/logo_white.png" alt="SkillNau Logo" class="footer-logo" />
+      <div class="footer-info">
+        대표. 김효진<br>
+        이메일. skillnau1@gmail.com<br>
+        주소. 경기 용인시 기흥구 죽전로 23 8 층, 802 호<br>
+        <br>
+        사업자등록번호. <br>
+        통신판매 신고.
+      </div>
+    </div>
+      <div class="hr-line"></div>
+    <div class="footer-bottom-row">
+      <div class="footer-text">
+        © 2025 SkillNau. All rights reserved.
+      </div>
+      <div class="footer-right">
+        <a href="https://www.instagram.com/skillnau" target="_blank" rel="noopener" aria-label="Instagram" class="footer-icon">
+          <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/icons-instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://open.kakao.com/o/sM0keNDh" target="_blank" rel="noopener" aria-label="KakaoTalk" class="footer-icon">
+          <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/icon-kakao-talk.png" alt="KakaoTalk" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
