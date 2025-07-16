@@ -1,528 +1,54 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<!--C:\Users\hyojin\Documents\skillnau-landing\skillnau-landing 경로 -->
+  <!-- 필수 메타 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillNau - 디자인 외주, 기대를 뛰어넘다</title>
+
+  <!-- SEO 기본 -->
+  <title>SkillNau | 전담 매니저와 함께하는 실패 없는 디자인 외주</title>
+  <meta name="description" content="스킬나우는 디자인 외주에 전담 매니저가 함께합니다. 기획부터 디자이너 매칭, 피드백까지 체계적인 협업으로 실패 없는 디자인 결과를 만들어보세요.">
+  <meta name="keywords" content="디자인 외주, 디자인 매니징, 디자인 기획, UIUX 디자인, 상세페이지 디자인, 브랜딩, 스킬나우, 디자인 매칭, 디자인 매니저, 디자인 프로젝트, 콘텐츠 디자인">
+  <meta name="author" content="SkillNau">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="ko">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://skillnau-landing.vercel.app/">
+
+  <!-- Open Graph (Facebook, LinkedIn 등) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SkillNau - 실패 없는 디자인 외주, 전담 매니저와 시작하세요">
+  <meta property="og:description" content="디자인 외주, 이제 실패하지 마세요. 전담 매니저가 함께하는 스킬나우에서 기획부터 매칭, 피드백까지 원스톱으로 해결하세요.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/og_img01.png">
+  <meta property="og:url" content="https://skillnau-landing.vercel.app/">
+  <meta property="og:site_name" content="SkillNau">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SkillNau - 실패 없는 디자인 외주, 전담 매니저와 시작하세요">
+  <meta name="twitter:description" content="디자인 외주 실패 이유? 기획과 소통의 부재! 스킬나우가 전담 매니저와 함께 성공적인 디자인 협업을 돕습니다.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/og_img01.png">
+  <meta name="twitter:url" content="https://skillnau-landing.vercel.app/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/favicon.png" type="image/png">
+
   <!-- Pretendard Font -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
   <!-- 푸터 CSS 연결 -->
   <link rel="stylesheet" href="footer.css">
-  <style>
-    :root {
-      --primary: #FF6C4A;
-      --gradient: linear-gradient(90deg, #F09366 0%, #FF6C4A 50%, #EF7988 100%);
-      --font: 'Pretendard', sans-serif;
-      --header-height: 64px;
-      --menu-hover: #FF6C4A;
-      --button-radius: 14px;
-      --button-border: #E0E0E0;
-      --button-bg: #fff;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: var(--font);
-      background: #fff;
-      color: #222;
-      box-sizing: border-box;
-    }
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .container {
-      width: 100%;
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 20px;
-      box-sizing: border-box;
-    }
-    /* Header */
-    .header {
-      width: 100%;
-      height: var(--header-height);
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      box-sizing: border-box;
-      border-bottom: 1px solid #F5F5F5;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .header-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      letter-spacing: -1px;
-      display: flex;
-      align-items: center;
-    }
-    .logo .orange {
-      color: var(--primary);
-    }
-    .logo .black {
-      color: #222;
-    }
-    .nav {
-      display: flex;
-      gap: 32px;
-      margin-left: 40px;
-    }
-    .nav a {
-      text-decoration: none;
-      color: #222;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: color 0.2s;
-      padding: 4px 0;
-    }
-    .nav a:hover {
-      color: var(--menu-hover);
-    }
-    .header-btn {
-      margin-left: auto;
-      padding: 10px 22px;
-      border: 1.5px solid var(--button-border);
-      border-radius: var(--button-radius);
-      background: var(--button-bg);
-      color: #444;
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.4s;
-      text-decoration: none;
-    }
-    .header-btn:hover {
-      background: var(--gradient);
-      color: #fff;
-      border: none;
-    }
-    /* Hero Section */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 140px 16px 80px 16px;
-      background: linear-gradient(180deg, #FFF0F2 0%, #FFFFFF 100%);
-    }
-    .pre-header {
-      font-size: 2em;
-      font-weight: 600;
-      color: #ff6b4ac9;
-      margin-bottom: 18px;
-      font-weight: 500;
-    }
-    .headline {
-      font-size: 3rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-    }
-    .headline .gradient {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-    }
-    .headline .black {
-      color: #222;
-      display: inline-block;
-    }
-    .subtext {
-      font-size: 1.15rem;
-      color: #444;
-      margin-bottom: 60px;
-      font-weight: 400;
-    }
-    .cta-btn {
-      padding: 12px 32px;
-      font-size: 1rem;
-      font-weight: 700;
-      border: 1px solid transparent;
-      border-radius: var(--button-radius);
-      background: var(--gradient);
-      color: #fff;
-      cursor: pointer;
-      transition: background 0.7s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 2px 8px rgba(255,108,74,0.08);
-      text-decoration: none;
-    }
-    .cta-btn:hover {
-      background: transparent;
-      border: 1px solid #ff6b4a9d;
-      color: #FF6C4A;
-    }
-    .pre-header, .headline, .subtext {
-      text-align: center;
-    }
-    .testimonial-box {
-      margin: 60px auto 0 auto;
-      padding: 20px 40px;
-      background: rgba(255, 255, 255, 0.95);
-      border: 2px solid #FF6C4A22;
-      border-radius: 24px;
-      box-shadow: 0 4px 24px 0 rgba(255, 107, 74, 0.123);
-      max-width: 600px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .testimonial-content {
-      display: flex;
-      align-items: center;
-      gap: 34px;
-    }
-    .testimonial-avatar {
-      width: 120px;
-      height: 120px;
-      display: block;
-      object-fit: contain;
-      margin: 0 auto 0 auto;
-    }
-    .testimonial-texts {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      text-align: left;
-    }
-    .testimonial-title {
-      font-size: 1.1rem;
-      color: #444;
-      font-weight: 700;
-    }
-    .testimonial-body {
-      font-size: 1rem;
-      color: #666;
-    }
-    .testimonial-meta {
-      font-size: 0.95rem;
-      color: #888;
-      margin-top: 8px;
-    }
-    
-    .design-types-section {
-      width: 100%;
-      background: #fff;
-      padding: 60px 20px;
-    }
-    .design-types-container {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: nowrap;
-    }
-    .design-types-title {
-      font-size: 1.5rem;
-      color: #222;
-      font-weight: 600;
-      text-align: left;
-      min-width: 260px;
-      max-width: 280px;
-      line-height: 1.5;
-      flex: 1 1 0;
-    }
-    .design-types-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 24px;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex: 2 1 0;
-    }
-    .design-types-list button {
-      background: rgba(255,255,255,0.3);
-      color: #FF6C4A;
-      border: 1px solid #FF6C4A;
-      border-radius: 18px;
-      padding: 10px 26px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      box-shadow: 0 2px 8px 0 rgba(255,108,74,0.10);
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s, border 0.2s;
-    }
-    /*.design-types-list button:hover {
-      background: linear-gradient(90deg, #F09366 0%, #FF6C4A 50%, #EF7988 100%);
-      color: #fff;
-      border: 1.5px solid #FF6C4A;
-    }*/
-    @media (max-width: 900px) {
-      .design-types-container {
-        flex-direction: column;
-        gap: 32px;
-        padding: 0 16px;
-        align-items: stretch;
-      }
-      .design-types-title {
-        text-align: center;
-        max-width: 100%;
-      }
-      .design-types-list {
-        justify-content: center;
-        max-width: 100%;
-      }
-    }
-    .fail-reason-section {
-      width: 100%;
-      background: #F7F8F9;
-      padding: 80px 0 60px 0;
-    }
-    .fail-reason-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .fail-reason-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 36px;
-      width: 100%;
-    }
-    .trust {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-      justify-self: end;
-    }
-    .communication {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
-      justify-self: start;
-    }
-    .planning {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-      align-self: start;
-      justify-self: end;
-    }
-    .character-img-wrap {
-      grid-column: 1 / 3;
-      grid-row: 2 / 3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
-    .character-img {
-      max-width: 160px;
-      width: 100%;
-      margin-top: 0;
-      display: block;
-    }
-    .result {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-      align-self: start;
-      justify-self: start;
-    }
-    .bubble {
-      position: relative;
-      background: #fff;
-      border-radius: 16px;
-      padding: 20px 16px 16px 16px;
-      font-size: 0.85rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      line-height: 1.5;
-      text-align: left;
-      max-width: 100%;
-      word-break: keep-all;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .mini-title {
-      background: #444;
-      color: #fff;
-      display: inline-block;
-      font-size: 0.75rem;
-      padding: 5px 14px;
-      border-radius: 12px;
-      font-weight: 600;
-      position: absolute;
-      top: -14px;
-      left: 18px;
-      z-index: 2;
-    }
-    .bubble::after {
-      content: "";
-      position: absolute;
-      left: 20px;
-      bottom: -12px;
-      border-width: 12px 8px 0 8px;
-      border-style: solid;
-      border-color: #fff transparent transparent transparent;
-    }
-    .trust::after, .planning::after {
-      left: auto;
-      right: 20px;
-    }
-    .communication::after, .result::after {
-      left: 20px;
-    }
-    .bubble.planning {
-      margin-right: 50px;
-    }
-    .bubble.result {
-      margin-left: 50px;
-    }
-    @media (max-width: 700px) {
-        .fail-reason-section {
-    padding: 28px 0 18px 0;
-  }
-      .fail-reason-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, auto);
-        gap: 30px;
-        max-width: 98vw;
-      }
-      .trust, .planning, .communication, .result {
-    width: 160px;
-    height: 80px;
-    /*padding-top: 4px;*/
-    aspect-ratio: 1/1;
-    min-width: 80px;
-    min-height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-      /*.trust, .communication, .planning, .result, .character-img-wrap {
-        grid-column: 1 / 2 !important;
-        justify-self: stretch !important;
-        align-self: stretch !important;
-      }*/
-      .communication {
-        grid-column: 1 / 2 !important;
-        justify-self: end !important;  /* 우측 정렬 */
-        align-self: start !important;
-        margin-right: 15%;
-    }
-    .result {
-        grid-column: 1 / 2 !important;
-        justify-self: end !important;  /* 우측 정렬 */
-        align-self: start !important;
-        margin-right: 3%;
-    }
-    .trust {
-        grid-column: 1 / 2 !important;
-        justify-self: start !important;  /* 좌측 정렬 */
-        align-self: start !important;
-        margin-left: 15%;
-    }
-    .planning {
-        grid-column: 1 / 2 !important;
-        justify-self: start !important;  /* 좌측 정렬 */
-        align-self: start !important;
-        margin-left: 3%;
-    }
-    .character-img-wrap {
-        justify-self: center !important;
-        align-self: center !important;
-    }
-      .character-img {
-        max-width: 200px;
-      }
-    }
-    .fail-reason-title {
-      font-size: 2rem;
-      font-size: 1.8rem;
-      font-weight: 700;      
-      margin-bottom: 80px;
-      color: #222;
-      text-align: center;
-    }
-    .header-logo {
-      height: 22px;
-      width: auto;
-      display: block;
-      object-fit: contain;
-    }
-    @media (max-width: 600px) {
-        .fail-reason-section {
-    padding: 28px 0 18px 0;
-  }
-      .fail-reason-grid {
-        display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 18px;
-    width: 100%;
-    max-width: 98vw;
-    justify-items: center;
-    align-items: start;
-      }
-      .trust, .planning, .communication, .result {
-            width: 96%;
-    max-width: 340px;
-    min-width: 120px;
-    min-height: 80px;
-    aspect-ratio: unset;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0;
-    box-sizing: border-box;
-  }
-      /*.trust, .communication, .planning, .result, .character-img-wrap {
-        grid-column: 1 / 2 !important;
-        justify-self: stretch !important;
-        align-self: stretch !important;
-      }*/
-      .trust { grid-row: 1; grid-column: 1; }
-  .communication { grid-row: 1; grid-column: 2; }
-  .planning { grid-row: 2; grid-column: 1; }
-  .result { grid-row: 2; grid-column: 2; }
-    .character-img-wrap {
-        grid-row: 3;
-    grid-column: 1 / 3;
-    justify-self: center;
-    align-self: start;
-    margin-top: 24px;
-    }
-      .character-img {
-        max-width: 160px;
-      }
-    }
-    .fail-reason-title {
-      font-size: 2rem;
-      font-size: 1.8rem;
-      font-weight: 700;      
-      margin-bottom: 60px;
-      color: #222;
-      text-align: center;
-      margin-left: 5%;
-    margin-right: 5%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
   <header class="header">
     <div class="header-container">
       <div class="logo">
-        <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/logo_orange.png" alt="SkillNau Logo" class="header-logo" />
+        <a href="#">
+            <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/logo_orange.png" alt="SkillNau Logo" class="header-logo" />
+          </a>
       </div>
       <nav class="nav">
         <a href="#service-advantage-section">서비스 소개</a>
@@ -530,6 +56,33 @@
         <a href="#review-section">고객 사례</a>
       </nav>
       <a href="https://super-cendol-354c83.netlify.app" target="_blank" rel="noopener noreferrer" class="header-btn">디자이너 인재풀 등록</a>
+      <!-- [1] 햄버거 버튼 추가 -->
+    <button class="hamburger" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+    </div>
+      <!-- [2] 오버레이 메뉴 추가 -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu-backdrop"></div>
+      <div class="mobile-menu">
+        <div class="mobile-menu-logo">
+          <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/logo_orange.png" alt="SkillNau Logo" />
+        </div>
+        <button class="close-menu" aria-label="메뉴 닫기">×</button>
+        <nav>
+          <ul>
+            <li><a href="#service-advantage-section">서비스 소개</a></li>
+            <li><a href="#process-section-bg">진행 방법</a></li>
+            <li><a href="#review-section">고객 사례</a></li>
+          </ul>
+        </nav>
+        <hr class="mobile-menu-divider" />
+        <div class="mobile-menu-btns">
+          <a href="https://tally.so/r/w2dyEp" target="_blank" rel="noopener noreferrer" class="mobile-btn cta-btn">지금 디자인 의뢰하기</a>
+          <a href="https://open.kakao.com/o/sM0keNDh" target="_blank" rel="noopener noreferrer" class="mobile-btn inquiry-btn">1:1 문의하기</a>
+          <a href="https://super-cendol-354c83.netlify.app" target="_blank" rel="noopener noreferrer" class="register-btn">디자이너 인재풀 등록</a>
+        </div>
+      </div>
     </div>
   </header>
   <main>
@@ -540,14 +93,17 @@
           <span class="gradient">디자인 외주,</span>
           <span class="black">왜 늘 기대에 못 미칠까요?</span>
         </div>
-        <div class="subtext">스킬나우는 디자인 기획부터 소통까지 전담 매니저가 함께 합니다.</div>
+        <div class="hero-subtext">
+          스킬카우는 디자인 기획부터 소통까지<br class="mobile-br">
+          전담 매니저가 함께 합니다.
+        </div>
         <a href="https://tally.so/r/w2dyEp" target="_blank" rel="noopener noreferrer" class="cta-btn">지금 디자인 의뢰하기</a>
         <div class="testimonial-box">
           <div class="testimonial-content">
             <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/memoji-character01-orange-ipad.png" alt="3D 캐릭터" class="testimonial-avatar">
             <div class="testimonial-texts">
-              <div class="testimonial-title"><b>디자인뿐 아니라 기획 정리까지 맡길 수 있어서 든든해요!</b></div>
-              <div class="testimonial-body">처음엔 기획조차 몰라서 막막했는데, 전담 매니저가 방향을 잡아준 덕분에 기대했던 디자인이 나왔어요.</div>
+              <div class="testimonial-title"><b>디자인뿐 아니라 기획 정리까지<br class="mobile-br">맏길 수 있어서 든든해요!</b></div>
+              <div class="testimonial-body">처음엔 기획조차 몰라서 막막했는데,<br class="mobile-br">전담 매니저가 방향을 잠아준 덕분에<br class="mobile-br">기대했던 디자인이 나왔어요.
               <div class="testimonial-meta">최OO 대표 (IT UX/UI, 4주 프로젝트)</div>
             </div>
           </div>
@@ -572,7 +128,10 @@
       </div>
     </section>
     <section class="fail-reason-section">
-        <h2 class="fail-reason-title">디자인 외주, 왜 매번 실패하는 걸까요?</h2>
+        <h2 class="fail-reason-title">
+    디자인 외주,<br class="mobile-br">
+    왜 매번 실패하는 걸까요?
+  </h2>
       <div class="fail-reason-inner">
         <div class="fail-reason-grid">
           <div class="bubble trust">
@@ -601,10 +160,10 @@
 
 <section id="service-advantage-section" class="service-advantage-section">
   <h2 class="service-advantage-title">
-    기획부터 매니징하는 <span class="highlight">스킬나우</span>
+    기획부터 매니징하는<br class="mobile-br"><span class="highlight">스킬나우</span>
   </h2>
   <div class="service-advantage-subtext">
-    <b>기획 정리부터 디자이너 매칭까지,</b>꼭 필요한 부분을 서포트합니다.
+    <b>기획 정리부터 디자이너 매칭까지,<br class="mobile-br"></b>꼭 필요한 부분을 서포트합니다.
   </div>
   <div class="service-advantage-cards">
     <div class="advantage-card">
@@ -642,35 +201,45 @@
 
 <div id="process-section-bg" class="process-section-bg">
   <section class="process-section">
-    <h2 class="process-title">외주업체가 아닌 파트너로 함께합니다
+    <h2 class="process-title">외주업체가 아닌<br class="mobile-br"> 파트너로 함께합니다
     </h2>
     <div class="process-title-subtext">스킬나우 디자인 협업 <b>5단계 프로세스</b>
     </div>
     <div class="process-steps">
       <div class="process-step">
         <div class="process-step-num">1</div>
-        <div class="process-step-title">신청하기</div>
-        <div class="process-step-desc">간단한 프로젝트 정보만 입력하면 시작됩니다.</div>
+        <div class="process-step-text-group">
+          <div class="process-step-title">신청하기</div>
+          <div class="process-step-desc">간단한 프로젝트 정보만 입력하면 시작됩니다.</div>
+        </div>
       </div>
       <div class="process-step">
         <div class="process-step-num">2</div>
-        <div class="process-step-title">전담매니저 상담</div>
-        <div class="process-step-desc">전담 매니저가 기획서와 레퍼런스를 함께 정리해드려요.</div>
+        <div class="process-step-text-group">
+          <div class="process-step-title">전담매니저 상담</div>
+          <div class="process-step-desc">전담 매니저가 기획서와 레퍼런스를 함께 정리해드려요.</div>
+        </div>
       </div>
       <div class="process-step">
         <div class="process-step-num">3</div>
-        <div class="process-step-title">계약 체결</div>
-        <div class="process-step-desc">확정된 조건으로 간편하게 계약서를 작성합니다.</div>
+        <div class="process-step-text-group">
+          <div class="process-step-title">계약 체결</div>
+          <div class="process-step-desc">확정된 조건으로 간편하게 계약서를 작성합니다.</div>
+        </div>
       </div>
       <div class="process-step">
         <div class="process-step-num">4</div>
-        <div class="process-step-title">중간 피드백</div>
-        <div class="process-step-desc">작업 진행 중 주요 시점마다 결과물 공유와 피드백을 반영해요.</div>
+        <div class="process-step-text-group">
+          <div class="process-step-title">중간 피드백</div>
+          <div class="process-step-desc">작업 진행 중 주요 시점마다 결과물 공유와 피드백을 반영해요.</div>
+        </div>
       </div>
       <div class="process-step">
         <div class="process-step-num">5</div>
-        <div class="process-step-title">완료</div>
-        <div class="process-step-desc">정해진 일정에 맞춰 최종 결과물을 전달드려요.</div>
+        <div class="process-step-text-group">
+          <div class="process-step-title">완료</div>
+          <div class="process-step-desc">정해진 일정에 맞춰 최종 결과물을 전달드려요.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -678,7 +247,7 @@
 
 <section id="review-section" class="review-section">
   <h2 class="review-title">
-    <span class="highlight">스킬나우</span>와 함께 성공적인 외주 디자인을 경험하세요
+    <span class="highlight">스킬나우</span>와 함께 성공적인<br class="mobile-br">외주 디자인을 경험하세요
   </h2>
   <div class="review-cards">
     <div class="review-card">
@@ -745,42 +314,42 @@
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question">
-          Q1. 프로젝트 등록 전에 준비할 게 있나요?
+          Q. 프로젝트 등록 전에 준비할 게 있나요?
           <span class="faq-toggle-icon"></span>
         </button>
         <div class="faq-answer">별도 양식 없이도 등록하실 수 있어요. 다만 기획 목적, 희망 스타일, 참고 자료 등을 함께 알려주시면 더 정확한 매칭과 결과로 이어집니다. 등록 후 ‘디자인 의뢰 상세 기획안’ 작성 서식을 이메일로 보내드릴게요.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">
-          Q2. 기획이 없어도 괜찮나요?
+          Q. 기획이 없어도 괜찮나요?
           <span class="faq-toggle-icon"></span>
         </button>
         <div class="faq-answer">네, 괜찮습니다! 스킬나우 매니저가 상담을 통해 기획 정리부터 도와드려요.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">
-          Q3. 어떤 디자이너가 매칭되나요?
+          Q. 어떤 디자이너가 매칭되나요?
           <span class="faq-toggle-icon"></span>
         </button>
         <div class="faq-answer">프로젝트 성격과 필요 스킬에 맞는 디자이너를 직접 선별해드리며, 포트폴리오도 함께 전달드립니다.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">
-          Q4. 커뮤니케이션은 어떻게 하나요?
+          Q. 커뮤니케이션은 어떻게 하나요?
           <span class="faq-toggle-icon"></span>
         </button>
         <div class="faq-answer">매칭 후에는 카카오톡 그룹채팅방을 통해 스킬나우 매니저와 디자이너가 함께 소통해요. 진행 상황을 함께 점검하고, 필요한 피드백도 빠르게 주고받을 수 있도록 돕고 있어요.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">
-          Q5. 디자인 작업은 어떻게 진행되나요?
+          Q. 디자인 작업은 어떻게 진행되나요?
           <span class="faq-toggle-icon"></span>
         </button>
         <div class="faq-answer">일반적으로는 ‘초기 시안 → 중간 확인 → 최종 결과물’의 단계로 진행돼요. 작업 성격이나 기간, 난이도에 따라 일부 단계가 간소화될 수 있고, 모든 과정은 사전에 안내드려요.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">
-          Q6. 결과물이 마음에 들지 않으면 어떻게 하나요?
+          Q. 결과물이 마음에 들지 않으면 어떻게 하나요?
           <span class="faq-toggle-icon"></span>
         </button>
         <div class="faq-answer">기본 1회 수정이 포함되어 있으며, 처음 요청한 기획 방향과 다를 경우 스킬나우가 중간에서 조율을 도와드립니다. 단, 최초 요청 내용에서 변경이 생긴 경우엔 추가 작업비가 발생할 수 있어요.</div>
@@ -792,725 +361,21 @@
       </div>
   </section>
 </section>
-
-<style>
-html {
-  scroll-behavior: smooth;
-}
-[id] {
-  scroll-margin-top: 80px;
-}
-.service-advantage-section {
-  max-width: 1140px;
-  margin: 80px auto 0 auto;
-  padding: 0 0 120px 0;
-  text-align: center;
-}
-.service-advantage-title {
-  font-size: 2.1rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-.service-advantage-title .highlight {
-  color: #FF6B00;
-}
-.service-advantage-subtext {
-  font-size: 1.08rem;
-  color: #666;
-  margin-bottom: 48px;
-}
-.service-advantage-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
-}
-.advantage-card {
-  background: #F8F9FB;
-  border-radius: 18px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.144);
-  border: 1px solid #E3E6EA;
-  padding: 36px 24px 40px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-.advantage-card:hover {
-  box-shadow: 0 6px 24px rgba(255,107,0,0.12);
-  transform: scale(1.03);
-  z-index: 1;
-}
-.advantage-icon {
-  font-size: 2.1rem;
-  color: #FF6B00;
-  margin-bottom: 14px;
-}
-.advantage-title {
-  font-size: 1.13rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #222;
-}
-.advantage-line {
-  width: 220px;
-  height: 2px;
-  background: linear-gradient(90deg, #FFB156 0%, #FF6B00 100%);
-  border-radius: 2px;
-  margin-bottom: 22px;
-}
-.advantage-desc {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.7;
-  margin: 0 20px 0 20px;
-}
-.advantage-title .orange {
-  color: #FF6B00;
-  font-weight: 700;
-}
-@media (max-width: 900px) {
-  .service-advantage-cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .advantage-card {
-    padding: 28px 12px 24px 12px;
-  }
-}
-
-.process-section-bg {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background: #F7F8F9;
-  padding: 80px 0 80px 0;
-}
-.process-section {
-  max-width: 1140px;
-  margin: 0 auto 100px auto;
-  padding: 0 20px;
-  text-align: center;
-  background: transparent;
-}
-.process-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-.process-title-subtext {
-  font-size: 1.08rem;
-  color: #666;
-  margin-bottom: 68px;
-}
-.process-steps {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0 24px;
-  align-items: flex-start;
-  position: relative;
-  margin-bottom: 32px;
-}
-.process-steps::before {
-  content: "";
-  position: absolute;
-  top: 19px;
-  left: calc(38px / 2 + 66px);
-  right: calc(38px / 2 + 66px);
-  height: 4px;
-  background: #FF6B00;
-  opacity: 0.12;
-  z-index: 0;
-}
-.process-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 8px;
-}
-.process-step-num {
-  width: 38px;
-  height: 38px;
-  background: linear-gradient(45deg, #FF6C4A 30%, #F09366 70%);
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.25rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 14px;
-  box-shadow: 0 2px 8px rgba(255,107,0,0.08);
-  position: relative;
-  z-index: 1;
-}
-.process-step-title {
-  font-size: 1.08rem;
-  font-weight: 700;
-  margin-top: 10px;
-  margin-bottom: 12px;
-  color: #222;
-}
-.process-step-desc {
-  font-size: 0.98rem;
-  color: #888;
-  line-height: 1.7;
-}
-@media (max-width: 900px) {
-  .process-steps {
-    grid-template-columns: 1fr;
-    gap: 24px 0;
-  }
-  .process-step {
-    margin-bottom: 24px;
-  }
-}
-
-.review-section {
-  max-width: 1140px;
-  margin: 80px auto 100px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-.review-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 60px;
-}
-.review-title .highlight {
-  color: #FF6B00;
-}
-.review-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
-  justify-content: center;
-}
-.review-card {
-  background: #F8F9FB;
-  border-radius: 18px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.144);
-  padding: 40px 50px 40px 50px;
-  border: 1px solid #E3E6EA;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-width: 0;
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-.review-card:hover {
-  box-shadow: 0 6px 24px rgba(255,107,0,0.12);
-  transform: scale(1.03);
-  z-index: 1;
-}
-.review-profile {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 14px;
-}
-.review-profile img {
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: top;
-  background: #eee;
-}
-.review-meta-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
-}
-.review-meta {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #222;
-}
-.review-meta-detail {
-  font-size: 0.95rem;
-  color: #888;
-  font-weight: 400;
-  margin-left: 0;
-  margin-bottom: 2px;
-}
-.review-strong {
-  color: #FF6B00;
-  font-size: 1.08rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-  line-height: 1.4;
-}
-.review-desc {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-@media (max-width: 900px) {
-  .review-cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .review-card {
-    padding: 24px 12px 20px 12px;
-  }
-}
-
-.cta2-section {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background: linear-gradient(90deg, #F49C6E 0%, #F17E7E 100%);
-  padding: 90px 0 90px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.cta2-inner {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  color: #fff;
-}
-.cta2-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-  line-height: 1.4;
-}
-.cta2-desc {
-  font-size: 1.08rem;
-  margin-bottom: 38px;
-  color: #fff;
-  opacity: 0.95;
-}
-.cta2-btn {
-  display: inline-block;
-  padding: 12px 32px;
-  font-size: 1rem;
-  font-weight: 700; /* 동일하게 맞춤 */
-  color: #fff;
-  background: #ffffff23;
-  border: 1.5px solid #fff;
-  border-radius: 14px; /* 동일하게 맞춤 */
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-}
-.cta2-btn:hover {
-  background: #fff;
-  color: #F17E7E;
-  box-shadow: 0 4px 24px rgba(241,126,126,0.12);
-}
-@media (max-width: 700px) {
-  .cta2-title {
-    font-size: 1.25rem;
-  }
-  .cta2-inner {
-    padding: 0 10px;
-  }
-  .cta2-section {
-    padding: 60px 0 60px 0;
-  }
-}
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  z-index: 1000;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  height: 80px;
-}
-.header-container {
-  max-width: 1140px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-}
-main {
-  padding-top: 0;
-}
-.faq-section-bg {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background: #F7F8F9;
-  padding: 0;
-}
-.faq-section {
-  max-width: 900px;
-  margin: 100px auto 80px auto;
-  padding: 0 20px;
-  background: transparent;
-}
-.faq-title {
-  font-size: 2rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 60px;
-}
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.faq-item {
-  border-radius: 0;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #e9e9e9;
-  box-shadow: none;
-  overflow: visible;
-}
-.faq-question {
-  width: 100%;
-  box-sizing: border-box;
-  background: none;
-  border: none;
-  outline: none;
-  font-size: 1.08rem;
-  font-weight: 600;
-  text-align: left;
-  padding: 22px 28px;
-  cursor: pointer;
-  color: #222;
-  transition: background 0.2s;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-/*.faq-question:hover {
-  color: #F17E7E;
-}*/
-.faq-toggle-icon {
-  margin-left: 16px;
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid #F17E7E; /* 삼각형 색상 */
-  transition: transform 0.2s;
-  display: inline-block;
-}
-
-.faq-item.active .faq-toggle-icon {
-  transform: rotate(180deg);
-  border-top: 8px solid #979797;
-}
-.faq-answer {
-  display: none;
-  padding: 22px 28px 22px 28px;
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.7;
-  background: #fff;
-  border-top: 1px solid #e9e9e9;
-}
-.faq-item.active .faq-answer {
-  display: block;
-}
-.faq-bottom-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 32px;
-  padding: 0 8px;
-  font-size: 1rem;
-  color: #444;
-  background: transparent;
-}
-.faq-bottom-text {
-  color: #444;
-  font-size: 1rem;
-  text-align: left;
-}
-.faq-inquiry-btn {
-  display: inline-block;
-  padding: 8px 24px;
-  border: 1.5px solid #FF6B00;
-  border-radius: 8px;
-  color: #FF6B00;
-  background: #ffffff65;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-.faq-inquiry-btn:hover {
-  background: var(--gradient);
-  color: #fff;
-}
-@media (max-width: 600px) {
-  .faq-bottom-row {
-    flex-direction: column;
-    gap: 12px;
-    align-items: stretch;
-    text-align: center;
-  }
-  .faq-inquiry-btn {
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-/* 900px 이하 (태블릿) */
-@media (max-width: 900px) {
-  .hero {
-    padding: 100px 12px 60px 12px;
-  }
-  .pre-header {
-    font-size: 2.4em;
-  }
-  .headline {
-    font-size: 3.8em;
-  }
-  .subtext {
-    font-size: 1.8em;
-  }
-}
-
-/* 700px 이하 (모바일) */
-@media (max-width: 700px) {
-  .hero {
-    padding: 70px 8px 40px 8px;
-  }
-  .pre-header {
-    font-size: 1.8em;
-  }
-  .headline {
-    font-size: 3.2em;
-  }
-  .subtext {
-    font-size: 1.6em;
-  }
-}
-
-/* 600px 이하 (작은 모바일) */
-@media (max-width: 600px) {
-  .hero {
-    padding: 50px 4px 30px 4px;
-  }
-  .pre-header {
-    font-size: 1.4em;
-  }
-  .headline {
-    font-size: 2em;
-    line-height: 1.1; 
-  }
-  .subtext {
-    font-size: 1.1em;
-  }
-}
-
-/* 900px 이하 (태블릿) */
-@media (max-width: 900px) {
-  .testimonial-box {
-    padding: 30px 40px;
-  }
-  .testimonial-avatar {
-    height: 150px;
-    width: 150px;
-  }
-}
-
-/* 700px 이하 (모바일) */
-@media (max-width: 700px) {
-  .testimonial-box {
-    padding: 30px 40px;
-  }
-  .testimonial-avatar {
-    height: 140px;
-    width: 140px;
-  }
-}
-
-/* 600px 이하 (작은 모바일) */
-@media (max-width: 600px) {
-  .testimonial-box {
-    margin: 60px 14px 0 14px;
-    padding: 26px 30px;
-  }
-  .testimonial-content {
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
-      }
-      .testimonial-texts {
-        text-align: center;
-      }
-  .testimonial-avatar {
-    height: 130px;
-    width: 130px;
-  }
-}
-
-/* 900px 이하 (태블릿) */
-@media (max-width: 900px) {
-  .design-types-section {
-    padding: 60px 20px;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .design-types-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 0;
-  }
-  .design-types-title,
-  .design-types-list {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
-  }
-}
-@media (max-width: 700px) {
-  .design-types-container {
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .design-types-title,
-  .design-types-list {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
-  }
-}
-@media (max-width: 600px) {
-  .fail-reason-inner {
-    display: block !important;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 !important;
-    text-align: center;
-  }
-  .fail-reason-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 24px !important;
-    width: fit-content !important;
-    max-width: 500px !important;
-    margin: 0 auto !important;
-    justify-items: center !important;
-    align-items: start;
-    padding: 0 !important;
-  }
-  .trust { 
-    grid-row: 1 !important; 
-    grid-column: 1 !important; 
-    justify-self: center !important; 
-    margin: 0 !important; 
-    width: 100% !important;
-    max-width: 180px !important;
-  }
-  .communication { 
-    grid-row: 1 !important; 
-    grid-column: 2 !important; 
-    justify-self: center !important; 
-    margin: 0 !important; 
-    width: 100% !important;
-    max-width: 180px !important;
-  }
-  .planning { 
-    grid-row: 2 !important; 
-    grid-column: 1 !important; 
-    justify-self: center !important; 
-    margin: 0 !important; 
-    width: 100% !important;
-    max-width: 180px !important;
-  }
-  .result { 
-    grid-row: 2 !important; 
-    grid-column: 2 !important; 
-    justify-self: center !important; 
-    margin: 0 !important; 
-    width: 100% !important;
-    max-width: 180px !important;
-  }
-  .character-img-wrap {
-    grid-row: 3;
-    grid-column: 1 / 3;
-    justify-self: center;
-    align-self: start;
-    margin-top: 24px;
-  }
-  .trust, .planning, .communication, .result {
-    width: 100% !important;
-    max-width: 180px !important;
-    min-width: 120px;
-    min-height: 80px;
-    padding: 12px 10px !important;
-    margin: 0 !important;
-    box-sizing: border-box;
-    text-align: center;
-    display: block !important;
-  }
-  .bubble {
-    max-width: 180px !important;
-    min-width: 120px;
-    min-height: 80px;
-    padding: 12px 10px !important;
-    margin: 0 !important;
-    box-sizing: border-box;
-    text-align: center;
-    display: block !important;
-  }
-  .mini-title {
-    text-align: center !important;
-    margin: 0 7% !important;
-    padding: 4px 8px !important;
-    display: block !important;
-    width: 120px !important;
-    height: 24px !important;
-    box-sizing: border-box !important;
-    font-size: 12px !important;
-    line-height: 16px !important;
-    overflow: hidden !important;
-  }
-}
-
-</style>
-
-<script>
-document.querySelectorAll('.faq-question').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    var item = btn.parentElement;
-    item.classList.toggle('active');
-  });
-});
-</script>
-
 <!-- 푸터 코드 붙여넣기 -->
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-left">
-      <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/logo_white.png" alt="SkillNau Logo" class="footer-logo" />
+      <div class="footer-top-row">
+        <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/logo_white.png" alt="SkillNau Logo" class="footer-logo" />
+        <div class="footer-right">
+          <a href="https://www.instagram.com/skillnau" target="_blank" rel="noopener" aria-label="Instagram" class="footer-icon">
+            <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/icons-instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://open.kakao.com/o/sM0keNDh" target="_blank" rel="noopener" aria-label="KakaoTalk" class="footer-icon">
+            <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/icon-kakao-talk.png" alt="KakaoTalk" />
+          </a>
+        </div>
+      </div>
       <div class="footer-info">
         대표. 김효진<br>
         이메일. skillnau1@gmail.com<br>
@@ -1521,20 +386,11 @@ document.querySelectorAll('.faq-question').forEach(function(btn) {
       </div>
     </div>
       <div class="hr-line"></div>
-    <div class="footer-bottom-row">
       <div class="footer-text">
         © 2025 SkillNau. All rights reserved.
       </div>
-      <div class="footer-right">
-        <a href="https://www.instagram.com/skillnau" target="_blank" rel="noopener" aria-label="Instagram" class="footer-icon">
-          <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/icons-instagram.png" alt="Instagram" />
-        </a>
-        <a href="https://open.kakao.com/o/sM0keNDh" target="_blank" rel="noopener" aria-label="KakaoTalk" class="footer-icon">
-          <img src="https://raw.githubusercontent.com/entjiny/skillnau-landing/main/images/icon-kakao-talk.png" alt="KakaoTalk" />
-        </a>
-      </div>
-    </div>
   </div>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>
