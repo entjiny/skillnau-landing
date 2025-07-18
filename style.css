@@ -1406,9 +1406,9 @@ html {
     padding: 10px;
     box-sizing: border-box;
   }
-  .design-types-list button:last-child {
+ /* .design-types-list button:last-child {
     grid-column: 1 / 3;
-  }
+  }*/
   .design-types-section {
     padding-left: 34px;
     padding-right: 34px;
