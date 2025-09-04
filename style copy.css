@@ -170,9 +170,9 @@ body {
     margin: 60px auto 0 auto;
     padding: 20px 40px;
     background: rgba(255, 255, 255, 0.95);
-    border: 1px solid #f59a85;
+    border: 2px solid #FF6C4A22;
     border-radius: 24px;
-    box-shadow: 0 4px 10px 0 rgba(177, 44, 14, 0.2);
+    box-shadow: 0 4px 24px 0 rgba(255, 107, 74, 0.123);
     max-width: 600px;
     display: flex;
     justify-content: center;
@@ -257,8 +257,8 @@ body {
 }
 .fail-reason-section {
     width: 100%;
-    background: #ffffff;
-    padding: 100px 0 60px 0;
+    background: #F7F8F9;
+    padding: 80px 0 60px 0;
 }
 .fail-reason-inner {
     max-width: 1000px;
@@ -312,11 +312,11 @@ body {
 }
 .bubble {
     position: relative;
-    background: #F7F8F9;
+    background: #fff;
     border-radius: 16px;
     padding: 20px 16px 16px 16px;
     font-size: 0.85rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.300);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     line-height: 1.5;
     text-align: left;
     max-width: 100%;
@@ -345,7 +345,7 @@ body {
     bottom: -12px;
     border-width: 12px 8px 0 8px;
     border-style: solid;
-    border-color: #F7F8F9 transparent transparent transparent;
+    border-color: #fff transparent transparent transparent;
 }
 .trust::after, .planning::after {
     left: auto;
@@ -368,37 +368,6 @@ body {
     color: #222;
     text-align: center;
  }
-
- .fail-reason-container {
-  text-align: center;
-  margin: 60px 0 60px 0;
-  padding: 0 16px;
-}
-
-/* 소제목 */
-.section-subtitle {
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: #444;
-  margin-bottom: 14px;
-}
-
-/* 메인 타이틀 */
-.section-title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 1.3;
-  color: #222;
-}
-
-.section-title .gradient {
-  background: var(--gradient); /* 기존 변수 사용 */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
-
-
 .header-logo {
     height: 22px;
     width: auto;
@@ -412,10 +381,9 @@ html {
     scroll-margin-top: 80px;
   }
   .service-advantage-section {
-    background: #F7F8F9;
-    max-width: 100%;
+    max-width: 1140px;
     margin: 80px auto 0 auto;
-    padding: 100px 0 120px 0;
+    padding: 0 0 120px 0;
     text-align: center;
   }
   .service-advantage-title {
@@ -423,60 +391,23 @@ html {
     font-weight: 700;
     margin-bottom: 18px;
   }
-  /* .service-advantage-title .highlight {
+  .service-advantage-title .highlight {
     color: #FF6B00;
   }
   .service-advantage-subtext {
     font-size: 1.08rem;
     color: #666;
     margin-bottom: 48px;
-  }*/
-  /* ✅ 숫자형 데이터 전체 컨테이너 */
-.service-advantage-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3등분 */
-  max-width: 1140px;
-  margin: 40px auto;
-  padding: 30px 20px;
-  text-align: center;
-  gap: 40px; /* 아이템 간격 */
-}
-
-/* ✅ 각 아이템 */
-.stat-item {
-  display: flex;
-  flex-direction: column; /* ✅ 순서 변경: 라벨 → 숫자 */
-  align-items: center;
-  min-width: 180px;
-}
-
-/* ✅ 숫자 */
-.stat-number {
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: #222;
-  margin-top: 4px; /* ✅ 라벨과 간격 */
-  letter-spacing: -1px;
-}
-
-/* ✅ 라벨 */
-.stat-label {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1.4;
-}
+  }
   .service-advantage-cards {
-    max-width: 1140px;
-    margin: 0 auto; /* 중앙 정렬 */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 36px;
-    padding: 0 20px; /* 작은 화면에서 좌우 여백 */
   }
   .advantage-card {
-    background: #Fff;
+    background: #F8F9FB;
     border-radius: 18px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.200);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.144);
     border: 1px solid #E3E6EA;
     padding: 36px 24px 40px 24px;
     display: flex;
@@ -485,8 +416,7 @@ html {
     transition: box-shadow 0.3s, transform 0.3s;
   }
   .advantage-card:hover {
-    box-shadow: 0 4px 10px rgba(177, 44, 14, 0.2);
-    border: 1px solid #f59a85;
+    box-shadow: 0 6px 24px rgba(255,107,0,0.12);
     transform: scale(1.03);
     z-index: 1;
   }
@@ -622,7 +552,7 @@ html {
   .review-card {
     background: #F8F9FB;
     border-radius: 18px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.200);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.144);
     padding: 40px 50px 40px 50px;
     border: 1px solid #E3E6EA;
     text-align: left;
@@ -633,8 +563,7 @@ html {
     transition: box-shadow 0.3s, transform 0.3s;
   }
   .review-card:hover {
-    box-shadow: 0 4px 10px rgba(177, 44, 14, 0.2);
-    border: 1px solid #f59a85;
+    box-shadow: 0 6px 24px rgba(255,107,0,0.12);
     transform: scale(1.03);
     z-index: 1;
   }
@@ -1331,15 +1260,6 @@ html {
     margin-right: 0;
     text-align: center;
     }
-    .fail-reason-container {
-      margin: 20px 0 86px 0;
-    }
-.section-subtitle {
-    font-size: 1.5rem;
-  }
-  .section-title {
-    font-size: 2.2rem;
-  }
 }
 
  @media (max-width: 600px) {
@@ -1686,13 +1606,5 @@ html {
     font-size: 1.1em;
     text-align: center;
     margin: 10px 0;
-  }
-
-  .section-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-  }
-  .section-title {
-    font-size: 2rem;
   }
 }
