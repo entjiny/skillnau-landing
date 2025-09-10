@@ -1,3 +1,8 @@
+// v2.js 또는 main.js 어딘가에
+document.querySelectorAll('.pf-card[href="#"]').forEach(a => {
+  a.addEventListener('click', e => e.preventDefault());
+});
+
 // /js/v2.js
 (() => {
   function initReviewSlider(root) {
